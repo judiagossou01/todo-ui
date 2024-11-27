@@ -1,6 +1,6 @@
 # TodoUi Application
 
-This project is an intuitive, modern web application that allows users to manage their daily tasks 
+This project is an intuitive, modern web application that allows users to manage their daily tasks
 in an organized way, based on Angular
 
 ## Development server
