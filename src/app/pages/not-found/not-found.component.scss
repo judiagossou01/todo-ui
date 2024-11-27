@@ -1,0 +1,72 @@
+/* -------------------------
+   Variables
+------------------------- */
+$primary-color: #39ac31;
+$hover-color: #2d8a27;
+$light-color: #eee;
+$default-color: #fff;
+$max-width: 900px;
+$image-url: "https://cdn.dribbble.com/users/722246/screenshots/3066818/404-page.gif";
+
+/* -------------------------
+   Page 404 Container
+------------------------- */
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Image Container
+------------------------- */
+.image-container {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background-image: url($image-url);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* -------------------------
+   Content Styling
+------------------------- */
+.content {
+  h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 10px 0 20px;
+    color: $light-color;
+    line-height: 1.5;
+  }
+}
+
+/* -------------------------
+   Button Styling
+------------------------- */
+.button {
+  text-decoration: none;
+  background-color: $primary-color;
+  color: $default-color;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}

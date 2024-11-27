@@ -1,1 +1,207 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Outfit:700|Poppins:400");
+
+/* -------------------------
+   Variables
+------------------------- */
+:root {
+  --text: hsl(0, 0%, 89%);
+  --muted: hsla(0, 0%, 89%, 0.5);
+  --background: linear-gradient(135deg, #3498db, #2c3e50);
+  --primary: #5bc0be;
+  --secondary: hsla(222.14, 100%, 83.53%, 0.05);
+  --accent: #6fffe9;
+  --positive: #80ed99;
+  --negative: #ff6863;
+  --danger: red;
+  --default: #fff;
+}
+
+/* -------------------------
+   Global Styles
+------------------------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: var(--text);
+  background: var(--background);
+}
+
+/* -------------------------
+   Typography
+------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 4.21rem;
+  /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem;
+  /* 12px */
+}
+
+p,
+a {
+  font-size: 0.9rem;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  outline: none;
+}
+
+/* -------------------------
+     Forms & Inputs
+  ------------------------- */
+
+form {
+  display: flex;
+  backdrop-filter: blur(0.1rem);
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+}
+
+input {
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  padding: 1rem;
+  background: var(--secondary);
+  color: var(--text);
+  border: none;
+  transition: border-color 0.3s ease;
+
+  &.ng-dirty.ng-invalid,
+  &.ng-touched.ng-invalid {
+    border: 1.5px solid var(--negative);
+  }
+
+  &::placeholder {
+    color: var(--default);
+    font-weight: lighter;
+  }
+}
+
+/* -------------------------
+     Buttons
+  ------------------------- */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--text);
+  border-radius: 0.5rem;
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* -------------------------
+   Common Styles
+------------------------- */
+.primary {
+  background: linear-gradient(114deg, var(--primary), var(--accent));
+  color: var(--default);
+}
+
+.default {
+  color: var(--default);
+}
+
+.secondary {
+  background: var(--secondary);
+}
+
+.muted {
+  color: var(--muted);
+
+  &.error {
+    color: var(--negative);
+  }
+}
+
+/* -------------------------
+   Layout Utilities
+------------------------- */
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-1 {
+  gap: 2rem;
+}
+
+.gp-2 {
+  gap: 1rem;
+}
+
+.gp-3 {
+  gap: 0.5rem;
+}
+
+.center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}

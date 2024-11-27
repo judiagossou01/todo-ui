@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="form-container">
+  <div class="decorative-elements">
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+    <div class="circle three"></div>
+  </div>
+  <form
+    [formGroup]="loginForm"
+    class="auth-form column gp-1"
+    (submit)="login()"
+  >
+    <div>
+      <h4>Login</h4>
+    </div>
+    <div class="column gp-2">
+      <input
+        formControlName="email"
+        placeholder="Email"
+        type="email"
+        [class.is-invalid]="isInvalidTouchedOrDirty('email')"
+      />
+      <small class="muted error" *ngIf="isInvalidTouchedOrDirty('email')">{{
+        getErrorMessage("email")
+      }}</small>
+      <input
+        formControlName="password"
+        placeholder="Password"
+        type="password"
+        [class.is-invalid]="isInvalidTouchedOrDirty('password')"
+      />
+      <small class="muted error" *ngIf="isInvalidTouchedOrDirty('password')"
+        >{{ getErrorMessage("password") }}</small
+      >
+      <button class="primary" type="submit">Continue</button>
+    </div>
+  </form>
+</div>
